@@ -1,0 +1,51 @@
+<ion-content [fullscreen]="true">
+
+  <div class="fullscreen">
+    <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title style="text-align:center;font-size:x-large;">Sign Up</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+
+        <form [formGroup]="userForm" (ngSubmit)="CreateAccount()">
+
+          <ion-item>
+            <ion-label position="floating">Full Name</ion-label>
+            <ion-input formControlName="Name" type="text" required></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label position="floating">Email Address</ion-label>
+            <ion-input formControlName="Email" type="email" required></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input formControlName="Password" type="password" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Profession</ion-label>
+            <ion-select formControlName="Profession">
+              <ion-select-option value="Manager">Manager</ion-select-option>
+              <ion-select-option value="Supervisor">Supervisor</ion-select-option>
+              <ion-select-option value="Employee">Employee</ion-select-option>
+            </ion-select>
+          </ion-item>
+      
+          <ion-item>
+            <ion-button (click)="CreateAccount()" [disabled]="userForm.invalid">
+              Sign Up
+            </ion-button>
+          </ion-item>
+      
+        </form>
+          
+      </ion-card-content>
+    </ion-card>
+    </div>
+  </div>
+  
+  </ion-content>
+  

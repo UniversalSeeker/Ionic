@@ -1,0 +1,7 @@
+{
+  "name": "ot-manager",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
